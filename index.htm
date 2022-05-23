@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&family=Play:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="title">Yard</h1>
+    <p id="description">You are a valued customer. Kindly help us improve our platform by taking this survey.</p>
+    <form id="survey-form">
+        <!--Name-->
+        <label id="name-label"><span class="distinct">Name</span>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </label>
+
+        <!--Email-->
+        <label id="email-label"><span class="distinct">Email</span>
+            <input type="email" id="email" placeholder="Enter your Email" required>
+        </label>
+
+        <!--Age-->
+        <label id="number-label"><span class="distinct">Age (optional)</span>
+            <input type="number" id="number" placeholder="Age" pattern="[0 - 9]" min="13" max="120">
+        </label>
+
+        <!--How did you hear about us?-->
+        <label><span class="distinct">How did you hear about us?</span>
+            <select id="dropdown">
+                <option>Social media</option>
+                <option>Our website</option>
+                <option>Other</option>
+            </select>
+        </label>
+
+        <!--Would you reccommend our services to your relative?-->
+        <p class="distinct">Would you reccommend our services to your relative?</p>
+        <label>
+            <input value="Yes, I would" name="would_you_reccommend_us?" type="radio">Yes, I would
+        </label>
+        <label>
+            <input value="Maybe" name="would_you_reccommend_us?" type="radio">Maybe
+        </label>
+        <label>
+            <input value="Prefer not to say" name="would_you_reccommend_us?" type="radio">Prefer not to say
+        </label>
+
+        <!--What would you like to see improved?-->
+        <p class="distinct">What would you like to see improved? (Check all that apply)</p>
+        <label>
+            <input type="checkbox" value="website">Our Website
+        </label>
+        <label>
+            <input type="checkbox" value="app">Our Mobile App
+        </label>
+        <label>
+            <input type="checkbox" value="messaging">Our Messaging Platform
+        </label>
+        <label>
+            <input type="checkbox" value="notifications">Our Notifications System
+        </label>
+        <label>
+            <input type="checkbox" value="security">Our Security Updates
+        </label>
+
+        <!--Any comments or suggestions?-->
+        <p class="distinct">Any comments or suggestions?</p>
+        <label>
+            <textarea placeholder="Enter your comment here..."></textarea>
+        </label>
+
+        <!--Submit-->
+        <input type="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>
